@@ -1,0 +1,19 @@
+meta {
+  name: Label by ean
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{registry}}/api/v1/esl/labels/:ean
+  body: none
+  auth: inherit
+}
+
+params:path {
+  ean: 123456789
+}
+
+settings {
+  encodeUrl: true
+}

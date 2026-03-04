@@ -1,0 +1,51 @@
+meta {
+  name: Transaction weighings Apple Copy
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{operations}}/api/v1/transactions
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action": "sendtransaction",
+      "deviceip": "127.0.0.1",
+      "devicesn": "0",
+      "transactiontype": "weighings",
+      "header": null,
+      "itemlist": [
+          {
+              "itemid": 1,
+              "pluid": 1,
+              "name": "Marlene Golden Delicious",
+              "transtype": 0,
+              "barcode": "010101010101",
+              "trackcode": null,
+              "tracklot": null,
+              "groupid": 1,
+              "departmentid": 1,
+              "itemtype": 0,
+              "weightuom": null,
+              "itemtare": 2,
+              "itemweight": 250,
+              "itemunitprice": 799,
+              "itemamount": 0,
+              "itemprintts": "202401101200",
+              "itemtax": 0,
+              "itempcs": null,
+              "itemsellbydate": "202402101200",
+              "itemeatbydate": "202403101200",
+              "trackinfo": null,
+              "additionalfields": null
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

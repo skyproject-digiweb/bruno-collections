@@ -1,0 +1,21 @@
+meta {
+  name: updateresults
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{iot}}/api/v1/info?serial=&ver01=&mac=
+  body: none
+  auth: inherit
+}
+
+params:query {
+  serial: 
+  ver01: 
+  mac: 
+}
+
+settings {
+  encodeUrl: true
+}

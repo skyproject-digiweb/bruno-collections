@@ -1,0 +1,30 @@
+meta {
+  name: Update Action
+  type: http
+  seq: 6
+}
+
+put {
+  url: {{iot_fe}}/api/v1/device_actions/:device_uuid/:action_id
+  body: json
+  auth: inherit
+}
+
+params:path {
+  device_uuid: 3cf0e414-18eb-4785-b190-f5aedec8dc57
+  action_id: 4
+}
+
+body:json {
+  {
+      "device_uuid": "3cf0e414-18eb-4785-b190-f5aedec8dc57",
+      "action": "get_log",
+      "action_params": ["today"],
+      "depends_on": null,
+      "dependency_status": null
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,66 @@
+meta {
+  name: labelformats
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{registry}}/api/v1/esl/labelformats
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "name": "ddd",
+      "fields": [
+          {
+              "x": 16,
+              "y": 18,
+              "width": 70,
+              "height": 37,
+              "maxchar": 0,
+              "fontfamily": "",
+              "fontsize": 0,
+              "fontstyle": 0,
+              "halignment": 0,
+              "valignment": 0,
+              "scriptposition": 0,
+              "scriptdeltay": 0,
+              "mask": "",
+              "hmultiplier": 1,
+              "vmultiplier": 1,
+              "isvisible": 0,
+              "colorcodeid": 16,
+              "rotation": 0,
+              "drawslash": 0,
+              "slashlinewidth": 2,
+              "linespacingpixel": 0,
+              "letterspacing": 0,
+              "autofit": 0,
+              "symbolsetting": 0,
+              "symbol": "",
+              "outline": 0,
+              "outlinewidth": 0,
+              "breakword": 0,
+              "uuid": "5c053e74-e88e-4586-913e-3872c4581efa",
+              "familyId": 1,
+              "fieldId": 24,
+              "label": "esl.FREE_DATA_D",
+              "fieldname": "freedatad"
+          }
+      ],
+      "shop_uuid": "bce5a53a-55e2-4933-b388-3f926faf06e4",
+      "type": "NORMAL",
+      "tag_id": 1,
+      "tag_name": "Infotag 2.0",
+      "width": 200,
+      "height": 96,
+      "screen": "FIRST_SCREEN",
+      "design_nr": 1
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,30 @@
+meta {
+  name: Pair
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{registry}}/api/v1/esl/items_labels
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~user_pair_action: REMOVE_AND_REPLACE
+  ~payload_hashcode: 1666776318
+}
+
+body:json {
+  {
+      "shop_uuid" : "bce5a53a-55e2-4933-b388-3f926faf06e4",
+      "ean": "0000000000001",
+      "tagid": "6666",
+      "shelfid": "1aa",
+      "orientation": "LANDSCAPE"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

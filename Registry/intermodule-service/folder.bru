@@ -1,0 +1,49 @@
+meta {
+  name: intermodule-service
+  seq: 1
+}
+
+auth {
+  mode: inherit
+}
+
+script:pre-request {
+  var server_url = bru.getEnvVar("keycloak-server-url");
+  var token_endpoint = server_url + "/realms/skypro/protocol/openid-connect/token";
+  
+  var details = {
+      "grant_type" : "client_credentials",
+      // "client_secret": '4tWabr62dYCWEG4GCW5xKTh3d9XkK1VO',// dev-env
+      // "client_secret": 'lW3DVuXJ7DJ4yLTZS7LR8r2E7EqXQFly',// 172.24.176.134
+      "client_secret": 'lOFY0rrOFqxex65hNPfwMlNhRaLemqDg',// https://37.159.166.37:9443/auth/
+      "client_id": 'intermodule-service'
+  }
+  
+  var formBody = [];
+  for (var property in details) {
+      formBody.push(
+          encodeURIComponent(property) + 
+          "=" + 
+          encodeURIComponent(details[property])
+      );
+  }
+  formBody = formBody.join("&");
+  
+  await bru.sendRequest({
+      url: token_endpoint,
+      method: 'POST',
+      headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+      body: formBody
+  }, async function(err, response) {
+      if (err) {
+          throw err;
+      }
+      const jsonResponse = response.data;
+      if (!jsonResponse.access_token) {
+          throw new Error(
+              "Unexpected response: missing 'access_token' property.\n" + 
+              JSON.stringify(jsonResponse));
+      }
+      bru.setVar("access-token", jsonResponse.access_token);
+  });
+}

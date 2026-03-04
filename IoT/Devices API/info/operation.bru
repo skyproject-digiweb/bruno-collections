@@ -1,0 +1,62 @@
+meta {
+  name: operation
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{iot}}/api/v1/info
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "data_type": "operation",
+      "machine_type": "SM",
+      "serial_no": "12345678",
+      "options": {
+          "machine_description": "SM",
+          "contents": [
+              {
+                  "code": "100-000",
+                  "value": "98000008"
+              },
+              {
+                  "code": "100-001",
+                  "value": "24.67.65-1-20240628-005158"
+              },
+              {
+                  "code": "100-002",
+                  "value": "postgres"
+              },
+              {
+                  "code": "100-003",
+                  "value": ""
+              },
+              {
+                  "code": "100-004",
+                  "value": "0000/00/00"
+              },
+              {
+                  "code": "100-005",
+                  "value": "7.1.1.41"
+              },
+              {
+                  "code": "100-006",
+                  "value": "50.26"
+              },
+              {
+                  "code": "900-011",
+                  "value": "Disable"
+              }
+          ],
+          "request_host": "jp",
+          "os": "L1"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

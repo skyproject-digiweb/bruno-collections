@@ -1,0 +1,46 @@
+meta {
+  name: /v1/third-party/traceability_2
+  type: http
+  seq: 7
+}
+
+patch {
+  url: {{thirdparty}}/api/v1/third-party/traceability?storeno=1&departmentno=1&traceabilitycode=20
+  body: json
+  auth: inherit
+}
+
+params:query {
+  storeno: 1
+  departmentno: 1
+  traceabilitycode: 20
+}
+
+headers {
+  Content-Type: application/json
+  Accept: application/json
+}
+
+body:json {
+  {
+      "kind": 1,
+      "productiondate": "20241010020000",
+      "slaughteredcountries": [
+          {
+              "slaughteredcntindex": 1,
+              "slaughteredcntvalue": "380"
+          }
+      ],
+      "slaughteredhouses": [
+          {
+              "slaughteredhouseindex": 1,
+              "slaughteredhousevalue": "slahouse modificato ttttttt"
+          }
+      ],
+      "traceabilityname": "Name modificato"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

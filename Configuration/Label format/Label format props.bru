@@ -1,0 +1,20 @@
+meta {
+  name: Label format props
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{configuration}}/api/v1/label_format_field_categories_v2/properties?family=TRK&id=1
+  body: none
+  auth: inherit
+}
+
+params:query {
+  family: TRK
+  id: 1
+}
+
+settings {
+  encodeUrl: true
+}

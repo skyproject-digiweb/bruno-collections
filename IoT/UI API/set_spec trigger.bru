@@ -1,0 +1,30 @@
+meta {
+  name: set_spec trigger
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{iot_fe}}/api/v1/device_actions
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "device_uuid": "3cf0e414-18eb-4785-b190-f5aedec8dc57",
+      "action": "set_spec",
+      "action_params": [
+          "YYYYMMDDhhmmss",
+          "url://",
+          "spec_id",
+          "md5"
+      ],
+      "depends_on": null,
+      "dependency_status": null
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,19 @@
+meta {
+  name: tag types by id_1
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{registry}}/api/v1/esl/tag/types/:id
+  body: none
+  auth: inherit
+}
+
+params:path {
+  id: 238
+}
+
+settings {
+  encodeUrl: true
+}

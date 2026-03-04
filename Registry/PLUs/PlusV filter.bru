@@ -1,0 +1,22 @@
+meta {
+  name: PlusV filter
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{registry}}/api/registry/api/v1/plusV?startRow=0&orderBy=commname%20ASC&obj.department_uuids=5c1196ed-0120-4fd1-b505-6588b3c3073a,a7693e18-2d37-403a-b2b0-175ab0161bbc
+  body: none
+  auth: inherit
+}
+
+params:query {
+  startRow: 0
+  orderBy: commname%20ASC
+  obj.department_uuids: 5c1196ed-0120-4fd1-b505-6588b3c3073a,a7693e18-2d37-403a-b2b0-175ab0161bbc
+  ~pageSize: 10
+}
+
+settings {
+  encodeUrl: true
+}

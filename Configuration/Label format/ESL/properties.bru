@@ -1,0 +1,19 @@
+meta {
+  name: properties
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{configuration}}/api/v1/label_format_esl_family_fields/properties/:familyId/
+  body: json
+  auth: inherit
+}
+
+params:path {
+  familyId: 1
+}
+
+settings {
+  encodeUrl: true
+}

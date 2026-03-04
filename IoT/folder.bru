@@ -1,0 +1,70 @@
+meta {
+  name: IoT
+  seq: 7
+}
+
+auth {
+  mode: bearer
+}
+
+auth:bearer {
+  token: {{access-token}}
+}
+
+script:pre-request {
+  
+  // var isGO = false;
+  // var isESL = false;
+  
+  // var client_id = bru.getEnvVar(`keycloak-${ isESL ? 'esl-' : '' }client-id`);
+  // var client_secret = bru.getEnvVar(`keycloak-${ isESL ? 'esl-' : '' }client-secret`);
+  // var server_url = bru.getEnvVar("keycloak-server-url");
+  // console.debug(server_url, client_id, client_secret);
+  
+  // var token_endpoint = server_url + "/realms/skypro/protocol/openid-connect/token";
+  
+  // var details = {
+  //    "grant_type" : "client_credentials",
+  //    "client_secret": client_secret
+  // }
+  
+  // var formBody = [];
+  
+  // for (var property in details) {
+  //     var encodedKey = encodeURIComponent(property);
+  //     var encodedValue = encodeURIComponent(details[property]);
+  //     formBody.push(encodedKey + "=" + encodedValue);
+  // }
+  
+  // formBody = formBody.join("&");
+  
+  // const btoa = require('btoa');
+  
+  // console.debug('Authorization: Basic ' + btoa(client_id+":"+client_secret));
+  // console.debug('body', formBody);
+  
+  // await bru.sendRequest({
+  //    url: token_endpoint,
+  //    method: 'POST',
+  //    headers: {
+  //      'Content-Type': 'application/x-www-form-urlencoded',
+  //      'Authorization': 'Basic ' + btoa(client_id+":"+client_secret),
+  //      'Cache-Control': 'no-cache',
+  //      'Host': 'localhost:7080',
+  //      'Connection': 'keep-alive'
+  //    },
+  //    body: formBody
+  // }, async function(err, response) {
+  //   if (err) {
+  //     console.error(':(', err)
+  //     throw err;
+  //   }
+  //   console.debug('success');
+  //   const jsonResponse = response.json();
+  // 	if (!jsonResponse.access_token) {
+  // 		throw new Error("Unexpected response: missing 'access_token' property.\n" + 
+  // 			JSON.stringify(jsonResponse));
+  // 	}
+  //   bru.variables.set("access-token", jsonResponse.access_token);
+  // });
+}

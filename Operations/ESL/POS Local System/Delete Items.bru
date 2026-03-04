@@ -1,0 +1,26 @@
+meta {
+  name: Delete Items
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{operations}}/api/v1/esl/items
+  body: json
+  auth: inherit
+}
+
+body:json {
+  [
+      {
+          "ean": "5702017415895"
+      },
+      {
+          "ean": "5702017424965"
+      }
+  ]
+}
+
+settings {
+  encodeUrl: true
+}

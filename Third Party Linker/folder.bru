@@ -1,0 +1,23 @@
+meta {
+  name: Third Party Linker
+  seq: 4
+}
+
+auth {
+  mode: oauth2
+}
+
+auth:oauth2 {
+  grant_type: client_credentials
+  access_token_url: {{keycloak-server-url}}/realms/skypro/protocol/openid-connect/token
+  refresh_token_url: 
+  client_id: {{external-third-party-client}}
+  client_secret: {{external-third-party-client-secret}}
+  scope: 
+  credentials_placement: basic_auth_header
+  credentials_id: 
+  token_placement: header
+  token_header_prefix: 
+  auto_fetch_token: true
+  auto_refresh_token: false
+}
