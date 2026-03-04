@@ -1,0 +1,15 @@
+meta {
+  name: Labels
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{registry}}/api/v1/esl/labels
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
