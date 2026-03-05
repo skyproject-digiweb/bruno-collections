@@ -1,0 +1,29 @@
+meta {
+  name: error
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{iot}}/api/v1/info
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "data_type": "error",
+      "machine_type": "SM",
+      "serial_no": "12345678",
+      "options": {
+          "error_code": "101",
+          "error_message": "Q3VzdG9tZXIgY2FsbCBmb3IgaGVscCBmcm9tIHNjYWxlIDQ4KFNNNTMwMC0wNDhYR1FUNSku",
+          "occurred": "20250522110936"
+      }
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

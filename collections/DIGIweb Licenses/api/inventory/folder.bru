@@ -1,0 +1,23 @@
+meta {
+  name: inventory
+  seq: 4
+}
+
+auth {
+  mode: oauth2
+}
+
+auth:oauth2 {
+  grant_type: client_credentials
+  access_token_url: {{license-oidc}}
+  refresh_token_url: 
+  client_id: {{license-client-id}}
+  client_secret: {{license-client-secret}}
+  scope: email
+  credentials_placement: basic_auth_header
+  credentials_id: 
+  token_placement: header
+  token_header_prefix: 
+  auto_fetch_token: true
+  auto_refresh_token: false
+}

@@ -1,0 +1,32 @@
+meta {
+  name: /v1/third-party/tray/write
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{thirdparty}}/api/v1/third-party/tray/write
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+  Accept: application/json
+}
+
+body:json {
+  {
+      "traystoreno": 0,
+      "traydepartmentno": 1,
+      "trayno": 6,
+      "trayname": "tray 8 write 2",
+      "traytare": 0,
+      "traywrappertare": 0,
+      "traywrappertype": "tray wrapper type"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

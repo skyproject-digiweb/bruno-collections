@@ -1,0 +1,15 @@
+meta {
+  name: ready
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{thirdparty}}/api/q/health/ready
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

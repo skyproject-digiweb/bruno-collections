@@ -1,0 +1,24 @@
+meta {
+  name: Traceability type
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{registry}}/api/v1/traceability_types
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "nr": 1,
+      "flag": 0,
+      "name": "text value",
+      "department_uuid" : "xxxx"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

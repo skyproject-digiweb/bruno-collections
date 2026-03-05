@@ -1,0 +1,33 @@
+meta {
+  name: Feedback Items (ESL)
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{operations}}/api/v1/esl/feedback/items
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+  	"details": [
+  		{
+  			"ean": "111111",
+  			"status": 0,
+  			"errormessage": ""
+  		},
+          {
+  			"ean": "0999999999",
+  			"status": 1,
+  			"errormessage": "NOT FOUND"
+  		}
+  	]
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

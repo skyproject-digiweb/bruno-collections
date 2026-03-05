@@ -1,0 +1,26 @@
+meta {
+  name: /v1/third-party/tray_2
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{thirdparty}}/api/v1/third-party/tray?traystoreno=0&traydepartmentno=1&trayno=7
+  body: none
+  auth: inherit
+}
+
+params:query {
+  traystoreno: 0
+  traydepartmentno: 1
+  trayno: 7
+}
+
+headers {
+  Content-Type: application/json
+  Accept: application/json
+}
+
+settings {
+  encodeUrl: true
+}

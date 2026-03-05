@@ -1,0 +1,22 @@
+meta {
+  name: Activation
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{configuration}}/api/v1/activation
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "license": "{\"digiwebUniqueIdentifier\":\"28f64ba7-8e09-4454-bcda-38a485d82bf0\",\"shopsQty\":1,\"devicesQty\":10,\"maintenanceSubscription\":true,\"expiryDate\":\"2099-01-01\"}",
+      "sign": "ARDeus0wRQIgMvQxGGnx5/lC4+5Rcmz2RsFahjmHp2um1TAXwaRuRVECIQDwjrcaD9svl2DAYGWLCCjGQLAhBK7cjwNIZNxaIFI8zA=="
+  }
+}
+
+settings {
+  encodeUrl: true
+}

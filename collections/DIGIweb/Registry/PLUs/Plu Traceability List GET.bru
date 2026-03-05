@@ -1,0 +1,162 @@
+meta {
+  name: Plu Traceability List GET
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{registry}}/api/v1/plu_traceability_list/0045fcbe-084f-45ba-be32-a55ececfc63e
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "uuid_plu": "0045fcbe-084f-45ba-be32-a55ececfc63e",
+      "nr": 1,
+      "bornincountry": [
+          {
+              "country_uuid": "xxx",
+              "idx": 1
+          },
+          {
+              "country_uuid": "a242",
+              "idx": 2
+          },
+          {
+              "country_uuid": "a107",
+              "idx": 5
+          }
+      ],
+      "breedingcountry": [
+          {
+              "country_uuid": "a107",
+              "idx": 1
+          },
+          {
+              "country_uuid": "a242",
+              "idx": 2
+          },
+          {
+              "country_uuid": "a107",
+              "idx": 5
+          }
+      ],
+      "cuttingcountry": [
+          {
+              "country_uuid": "a107",
+              "idx": 1
+          },
+          {
+              "country_uuid": "a242",
+              "idx": 2
+          },
+          {
+              "country_uuid": "a107",
+              "idx": 5
+          }
+      ],
+      "origincountry": [
+          {
+              "country_uuid": "a107",
+              "idx": 1
+          },
+          {
+              "country_uuid": "a242",
+              "idx": 2
+          },
+          {
+              "country_uuid": "a107",
+              "idx": 5
+          }
+      ],
+      "slaughtercountry": [
+          {
+              "country_uuid": "a107",
+              "idx": 1
+          },
+          {
+              "country_uuid": "a242",
+              "idx": 2
+          },
+          {
+              "country_uuid": "a107",
+              "idx": 5
+          }
+      ],
+      "category": [
+          {
+              "linked_uuid": "f1c906ee-1a43-463b-8c4f-923e667de834",
+              "idx": 1
+          },
+          {
+              "linked_uuid": "f1c906ee-1a43-463b-8c4f-923e667de834",
+              "idx": 2
+          },
+          {
+              "linked_uuid": "f1c906ee-1a43-463b-8c4f-923e667de834",
+              "idx": 5
+          }
+      ],
+      "cuttinghouse": [
+          {
+              "linked_uuid": "1692e03c-2887-471d-bd16-15f053753642",
+              "idx": 1
+          },
+          {
+              "linked_uuid": "1692e03c-2887-471d-bd16-15f053753642",
+              "idx": 2
+          },
+          {
+              "linked_uuid": "1692e03c-2887-471d-bd16-15f053753642",
+              "idx": 5
+          }
+      ],
+      "kind": [
+          {
+              "linked_uuid": "68bd8745-8bf0-41cb-8671-adf2d9aa4764",
+              "idx": 1
+          },
+          {
+              "linked_uuid": "68bd8745-8bf0-41cb-8671-adf2d9aa4764",
+              "idx": 2
+          },
+          {
+              "linked_uuid": "68bd8745-8bf0-41cb-8671-adf2d9aa4764",
+              "idx": 5
+          }
+      ],
+      "race": [
+          {
+              "linked_uuid": "3fd15d9c-fd7c-4e93-a1c0-f48d6fa7ad4f",
+              "idx": 1
+          },
+          {
+              "linked_uuid": "3fd15d9c-fd7c-4e93-a1c0-f48d6fa7ad4f",
+              "idx": 2
+          },
+          {
+              "linked_uuid": "3fd15d9c-fd7c-4e93-a1c0-f48d6fa7ad4f",
+              "idx": 5
+          }
+      ],
+      "slaughterhouse": [
+          {
+              "linked_uuid": "86d38d33-e9a5-4644-a60d-bd1319f34a13",
+              "idx": 1
+          },
+          {
+              "linked_uuid": "86d38d33-e9a5-4644-a60d-bd1319f34a13",
+              "idx": 2
+          },
+          {
+              "linked_uuid": "86d38d33-e9a5-4644-a60d-bd1319f34a13",
+              "idx": 5
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

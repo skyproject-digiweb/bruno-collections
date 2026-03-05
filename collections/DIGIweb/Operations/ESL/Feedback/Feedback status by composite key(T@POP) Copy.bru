@@ -1,0 +1,25 @@
+meta {
+  name: Feedback status by composite key(T@POP) Copy
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{operations}}/api/v1/esl/feedback/tpop_status/:shop_uuid/:device_uuid/:device_key
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~: 
+}
+
+params:path {
+  shop_uuid: bce5a53a-55e2-4933-b388-3f926faf06e4
+  device_uuid: 293b45a5-d462-4c8d-83e9-01c70a2d1056
+  device_key: serverTpop
+}
+
+settings {
+  encodeUrl: true
+}

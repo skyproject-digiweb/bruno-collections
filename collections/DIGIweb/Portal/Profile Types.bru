@@ -1,0 +1,21 @@
+meta {
+  name: Profile Types
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:7080/api/portal/api/v1/profile_types?startRow=0&pageSize=0&obj.names=SuperAdmin
+  body: none
+  auth: inherit
+}
+
+params:query {
+  startRow: 0
+  pageSize: 0
+  obj.names: SuperAdmin
+}
+
+settings {
+  encodeUrl: true
+}

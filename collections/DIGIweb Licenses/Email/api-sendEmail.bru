@@ -1,0 +1,49 @@
+meta {
+  name: /api/sendEmail
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/licenses/sendEmail
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+  Accept: application/json
+}
+
+body:json {
+  {
+      "id": 1,
+      "customerName": "John Doe",
+      "customerAddress": "Street, 1",
+      "customerPhone": "555-1234565677",
+      "customerEmail": "info@email.com",
+      "customerContact": "John Smith",
+      "shopsQty": 1,
+      "devicesQty": 100,
+      "maintenanceSubscription": true,
+      "expiryDate": "2099-01-01",
+      "subjectsEmails": [
+          "info@email.com"
+      ],
+      "refOrder": "1234567890",
+      "registerID": null,
+      "activations": [
+          {
+              "id": 1,
+              "digiwebUniqueIdentifier": null,
+              "unlockCode": "Bf2dU77bQ026UM21c6_O7A",
+              "activationCode": null,
+              "activationCodeSign": null
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

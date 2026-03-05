@@ -1,0 +1,95 @@
+meta {
+  name: Transaction weighings disable Lot
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{operations}}/api/v1/transactions
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action": "sendtransaction",
+      "deviceip": "10.10.8.55",
+      "devicesn": "20913289",
+      "transactiontype": "weighings",
+      "header": {
+          "transactionid": 12,
+          "clerk": "",
+          "clerkid": 9999,
+          "firstitemtime": "20241104194251",
+          "printtime": "20241104194251",
+          "scaledepartment": 80,
+          "totalitems": 1,
+          "totalweight": 74,
+          "weightuom": "",
+          "priceuom": "",
+          "totalamount": 22,
+          "totalbarcode": "11111110002290",
+          "queuenumber": 0,
+          "orderno": 0,
+          "scalenr": 1,
+          "totalamountoftax": 0
+      },
+      "itemlist": [
+          {
+              "itemid": 0,
+              "pluid": 1,
+              "name": "MELE",
+              "transtype": 0,
+              "barcode": "11111110002290",
+              "trackcode": 2,
+              "groupid": 1,
+              "departmentid": 1,
+              "itemtype": 0,
+              "itemtare": 0,
+              "itemweight": 74,
+              "itemunitprice": 293,
+              "itemamount": 22,
+              "itemprintts": "20241104194251",
+              "itemtax": 0,
+              "itempcs": 1,
+              "trackinfo": [
+                  {
+                      "refnr": "REFNR1",
+                      "lot": "LOT1",
+                      "origincntry": "1200",
+                      "borncntry": 0,
+                      "breedingcntry1": 1200,
+                      "breedingcntry2": 0,
+                      "breedingcntry3": 0,
+                      "breedingcntry4": 0,
+                      "breedingcntry5": 0,
+                      "slaughtercntry": 32,
+                      "slaughterhouse1": "Slaughter house",
+                      "cuttingcntry": 32,
+                      "cuttinghouse2": "Cutting house",
+                      "suppliername": "",
+                      "suppliercode": "",
+                      "kind": "non tracciabile",
+                      "eatdate": "0",
+                      "gtin": "",
+                      "category": "0",
+                      "race": "",
+                      "weight": 0.000,
+                      "trackcolor": "1200",
+                      "trackfreetext1": "",
+                      "trackfreetext2": "",
+                      "trackfreetext3": "",
+                      "trackfreetext4": "",
+                      "trackfreetext5": "",
+                      "ingtext1": 0,
+                      "clerk": "9999"
+                  }
+              ]
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

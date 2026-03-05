@@ -1,0 +1,38 @@
+meta {
+  name: /v1/third-party/esl/item_2
+  type: http
+  seq: 3
+}
+
+delete {
+  url: {{thirdparty}}/api/v1/third-party/esl/item?storenr=0&ean=123456789
+  body: none
+  auth: inherit
+}
+
+params:query {
+  storenr: 0
+  ean: 123456789
+}
+
+headers {
+  Content-Type: application/json
+  Accept: application/json
+}
+
+script:pre-request {
+  // // var pluno = pm.environment.get("pluno");
+  // var newTraceType = 2;
+  
+  // pluno = parseInt(pluno) + 1;
+  
+  // if(pluno == 10){
+  // //     pm.environment.set("newTraceType",newTraceType);
+  // }
+  
+  // // pm.environment.set("pluno",pluno);
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,23 @@
+meta {
+  name: /api/licenses/:registerID/reset-codes
+  type: http
+  seq: 1
+}
+
+put {
+  url: {{baseUrl}}/api/licenses/:registerID/reset-codes
+  body: none
+  auth: inherit
+}
+
+params:path {
+  registerID: <long>
+}
+
+headers {
+  Accept: application/json
+}
+
+settings {
+  encodeUrl: true
+}

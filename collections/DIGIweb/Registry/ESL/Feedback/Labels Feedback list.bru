@@ -1,0 +1,15 @@
+meta {
+  name: Labels Feedback list
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{registry}}/api/v1/esl/labels/
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

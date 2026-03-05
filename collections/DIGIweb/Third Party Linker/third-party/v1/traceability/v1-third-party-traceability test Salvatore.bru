@@ -1,0 +1,65 @@
+meta {
+  name: /v1/third-party/traceability test Salvatore
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{thirdparty}}/api/v1/third-party/traceability
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+  Accept: application/json
+}
+
+body:json {
+  {
+      "storeno": 0,
+      "departmentno": 1,
+      "traceabilitycode": 0,
+      "refno": "refno{{tracecode}}",
+      "traceabilityname": "Name {{tracecode}}",
+      "borncountries": [
+          {
+              "borncntindex": 1,
+              "borncntvalue": 380
+          },
+          {
+              "borncntindex": 2,
+              "borncntvalue": 208
+          }
+      ],
+      "breedingcountries": [
+          {
+              "breedingcntindex": 1,
+              "breedingcntvalue": 380
+          },
+          {
+              "breedingcntindex": 1,
+              "breedingcntvalue": 208
+          }
+      ],
+      "traceabilitytypes": [
+          {
+              "traceabilitytypeindex": 1,
+              "traceabilitytypevalue": 1
+          }
+      ],
+      "kind": 1,
+      "weight": 2999,
+      "productiondate": "20241225000000"
+  }
+}
+
+script:pre-request {
+  var tracecode = bru.getEnvVar("tracecode");
+  tracecode = parseInt(tracecode) + 1;
+  bru.setEnvVar("tracecode",tracecode);
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,91 @@
+meta {
+  name: /v1/third-party/traceability/write
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{thirdparty}}/api/v1/third-party/traceability/write
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+  Accept: application/json
+}
+
+body:json {
+  {
+      "storeno": 0,
+      "departmentno": 1,
+      "traceabilitycode": 1,
+      "refno": "1",
+      "traceabilityname": "Lot name write 1",
+      "borncountries": [
+          {
+              "borncntindex": 1,
+              "borncntvalue": 380
+          },
+          {
+              "borncntindex": 2,
+              "borncntvalue": 208
+          }
+      ],
+      "breedingcountries": [
+          {
+              "breedingcntindex": 1,
+              "breedingcntvalue": 380
+          },
+          {
+              "breedingcntindex": 1,
+              "breedingcntvalue": 208
+          }
+      ],
+      "slaughteredcountries": [
+          {
+              "slaughteredcntindex": 1,
+              "slaughteredcntvalue": 380
+          },
+          {
+              "slaughteredcntindex": 2,
+              "slaughteredcntvalue": 208
+          }
+      ],
+      "cuttingcountries": [
+          {
+              "cuttingcntindex": 1,
+              "cuttingcntvalue": 380
+          },
+          {
+              "cuttingcntindex": 1,
+              "cuttingcntvalue": 208
+          }
+      ],
+      "slaughteredhouses": [
+          {
+              "slaughteredhouseindex": 1,
+              "slaughteredhousevalue": "one"
+          }
+      ],
+      "cuttinghouses": [
+          {
+              "cuttinghouseindex": 1,
+              "cuttinghousevalue": "one"
+          }
+      ],
+      "traceabilitytypes": [
+          {
+              "traceabilitytypeindex": 1,
+              "traceabilitytypevalue": 1
+          }
+      ],
+      "kind": 1,
+      "weight": 2999,
+      "productiondate": "20241225000000"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

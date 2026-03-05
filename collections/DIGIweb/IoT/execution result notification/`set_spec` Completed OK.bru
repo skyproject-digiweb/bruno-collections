@@ -1,0 +1,30 @@
+meta {
+  name: `set_spec` Completed OK
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{iot}}/api/v1/info
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "data_type": "trigger",
+      "machine_type": "",
+      "serial_no": "",
+      "options": [
+          {
+              "action": "get_log",
+              "action_params": [{}],
+              "action_result": "0"
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

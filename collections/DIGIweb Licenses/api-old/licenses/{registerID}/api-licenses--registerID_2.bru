@@ -1,0 +1,19 @@
+meta {
+  name: /api/licenses/:registerID_2
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{baseUrl}}/api/licenses/:registerID
+  body: none
+  auth: inherit
+}
+
+params:path {
+  registerID: <long>
+}
+
+settings {
+  encodeUrl: true
+}

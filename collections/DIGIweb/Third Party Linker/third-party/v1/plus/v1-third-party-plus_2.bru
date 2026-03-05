@@ -1,0 +1,27 @@
+meta {
+  name: /v1/third-party/plus_2
+  type: http
+  seq: 6
+}
+
+delete {
+  url: {{thirdparty}}/api/v1/third-party/plus?storeno=1&pluno=7&pludepartmentno=1&plugroupno=1
+  body: none
+  auth: inherit
+}
+
+params:query {
+  storeno: 1
+  pluno: 7
+  pludepartmentno: 1
+  plugroupno: 1
+}
+
+headers {
+  Content-Type: application/json
+  Accept: application/json
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,20 @@
+meta {
+  name: item by ean and shop
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{registry}}/api/v1/esl/item/:shop_uuid/:ean
+  body: none
+  auth: inherit
+}
+
+params:path {
+  shop_uuid: bce5a53a-55e2-4933-b388-3f926faf06e4
+  ean: 0000000000117
+}
+
+settings {
+  encodeUrl: true
+}

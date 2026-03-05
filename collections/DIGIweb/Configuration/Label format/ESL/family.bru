@@ -1,0 +1,15 @@
+meta {
+  name: family
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{configuration}}/api/v1/label_format_esl_family_fields
+  body: json
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

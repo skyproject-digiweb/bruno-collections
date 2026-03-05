@@ -1,0 +1,25 @@
+meta {
+  name: Plus
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{registry}}/api/v1/plus?startRow=0&pageSize=10
+  body: none
+  auth: inherit
+}
+
+params:query {
+  startRow: 0
+  pageSize: 10
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+docs {
+  test
+}

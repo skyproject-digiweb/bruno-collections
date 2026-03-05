@@ -1,0 +1,21 @@
+meta {
+  name: `get log` Ack
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{iot}}/api/v1/info?data_type=trigger&machine_type=SM&serial_no=12345678
+  body: none
+  auth: inherit
+}
+
+params:query {
+  data_type: trigger
+  machine_type: SM
+  serial_no: 12345678
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,19 @@
+meta {
+  name: /v1/third-party/transactions
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{thirdparty}}/api/v1/third-party/transactions
+  body: none
+  auth: inherit
+}
+
+headers {
+  Accept: application/json
+}
+
+settings {
+  encodeUrl: true
+}

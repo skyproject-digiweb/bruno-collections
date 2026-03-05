@@ -1,0 +1,15 @@
+meta {
+  name: ActivationStatus
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{configuration}}/api/v1/activation/status
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,38 @@
+meta {
+  name: /api/licenses_1
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{baseUrl}}/api/licenses
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+  Accept: application/json
+}
+
+body:json {
+  {
+    "customerName": "John Doe",
+    "customerAddress": "Street, 1",
+    "customerPhone": "555-1234565677",
+    "customerEmail": "info@email.com",
+    "customerContact": "John Smith",
+    "shopsQty": 1,
+    "devicesQty": 25,
+    "maintenanceSubscription": true,
+    "expiryDate": "2099-01-01",
+    "subjectsEmails": [
+      "info@email.com"
+    ],
+    "refOrder": "1234567890"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

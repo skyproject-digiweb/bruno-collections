@@ -1,0 +1,15 @@
+meta {
+  name: Count Shops Active
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{registry}}/api/v1/count/shops/active
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

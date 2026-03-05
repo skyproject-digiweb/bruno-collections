@@ -1,0 +1,43 @@
+meta {
+  name: /api/licenses/:registerID_1
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{baseUrl}}/api/licenses/:registerID
+  body: json
+  auth: inherit
+}
+
+params:path {
+  registerID: 1
+}
+
+headers {
+  Content-Type: application/json
+  Accept: application/json
+}
+
+body:json {
+  {
+      "customerName": "John Doe",
+      "customerAddress": "Street, 1",
+      "customerPhone": "555-1234565677",
+      "customerEmail": "info@email.com",
+      "customerContact": "John Smith",
+      "shopsQty": 3,
+      "devicesQty": 100,
+      "maintenanceSubscription": true,
+      "expiryDate": "2099-01-01",
+      "subjectsEmails": [
+          "info@email.com"
+      ],
+      "refOrder": "1234567890",
+      "registerID": 1
+  }
+}
+
+settings {
+  encodeUrl: true
+}

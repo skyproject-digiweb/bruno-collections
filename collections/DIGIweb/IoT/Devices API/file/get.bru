@@ -1,0 +1,23 @@
+meta {
+  name: get
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{iot}}/api/v1/file?data_type&machine_type&serial_no&remote_filepath&file_name
+  body: none
+  auth: inherit
+}
+
+params:query {
+  data_type: null
+  machine_type: null
+  serial_no: null
+  remote_filepath: null
+  file_name: null
+}
+
+settings {
+  encodeUrl: true
+}

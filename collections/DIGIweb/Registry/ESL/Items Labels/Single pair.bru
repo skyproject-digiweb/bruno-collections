@@ -1,0 +1,33 @@
+meta {
+  name: Single pair
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{registry}}/api/v1/esl/items_labels/:shop_uuid/:ean/:tagid
+  body: json
+  auth: inherit
+}
+
+params:path {
+  shop_uuid: bce5a53a-55e2-4933-b388-3f926faf06e4
+  ean: 0000000000117
+  tagid: 456
+}
+
+body:json {
+  {
+      "shop_uuid" : "bce5a53a-55e2-4933-b388-3f926faf06e4",
+      "ean": "0000000000001",
+      "tagid": "123",
+      "shelfid": "1aa",
+      "orientation": "LANDSCAPE",
+      "status": "M",
+      "payload_hashcode" : 1665162672
+  }
+}
+
+settings {
+  encodeUrl: true
+}

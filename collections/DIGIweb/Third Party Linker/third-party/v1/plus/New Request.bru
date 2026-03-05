@@ -1,0 +1,15 @@
+meta {
+  name: New Request
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{thirdparty}}/api/v1/third-party/plus/clean
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

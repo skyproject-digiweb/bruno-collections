@@ -1,0 +1,28 @@
+vars {
+  thirdparty: http://localhost:7080
+  keycloak-server-url: http://localhost:7080/auth
+  registry: http://localhost:7080/api/registry
+  configuration: http://localhost:7080/api/configuration
+  keycloak-client-id: a9ebfb75-adda-49c5-af38-f54f43ca9c43
+  keycloak-esl-client-id: t@pop---laz
+  operations: http://localhost:7080/api/operations
+  external-third-party-client: external-third-party-client
+  intermodule-service-client: intermodule-service
+  iot: http://localhost:7080/iot
+  iot_fe: http://localhost:8091/api/iot
+  ~nrShop: 0
+  ~pluno: 
+  ~trayno: 0
+  ~tracecode: 0
+  ~baseUrl: http://localhost:7080
+  ~pluno: 0
+  ~multiclient: http://localhost:9091
+  pluno: 
+}
+vars:secret [
+  keycloak-client-secret,
+  keycloak-esl-client-secret,
+  external-third-party-client-secret,
+  intermodule-service-client-secret,
+  access-token
+]

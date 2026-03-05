@@ -1,0 +1,54 @@
+meta {
+  name: /api/licenses/sendEmail/{content)}
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/licenses/:content/sendEmail
+  body: json
+  auth: inherit
+}
+
+params:path {
+  content: activationCode
+}
+
+headers {
+  Content-Type: application/json
+  Accept: application/json
+}
+
+body:json {
+  {
+      "id": 1,
+      "customerName": "ddddj",
+      "customerAddress": "jdjdjdd",
+      "customerPhone": "djdjdjdj",
+      "customerEmail": "ddd@gmail.com",
+      "customerContact": "djjdjdjd",
+      "shopsQty": 4,
+      "devicesQty": 78,
+      "maintenanceSubscription": true,
+      "expiryDate": "2099-01-01",
+      "subjectsEmails": [
+          "danieledistante@gmail.com"
+      ],
+      "refOrder": "jdjdj",
+      "registerID": 1,
+      "activations": [
+          {
+              "id": 1,
+              "digiwebUniqueIdentifier": null,
+              "unlockCode": "NBoMsFACQYKv2aslHISDPQ",
+              "activationCode": null,
+              "activationCodeSign": null,
+              "unlockCodeValid": true
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,481 @@
+meta {
+  name: /v1/third-party/plus_1
+  type: http
+  seq: 5
+}
+
+patch {
+  url: {{thirdparty}}/api/v1/third-party/plus?storeno=0&pluno={{pluno}}&pludepartmentno=1&plugroupno=1
+  body: json
+  auth: inherit
+}
+
+params:query {
+  storeno: 0
+  pluno: {{pluno}}
+  pludepartmentno: 1
+  plugroupno: 1
+}
+
+headers {
+  Content-Type: application/json
+  Accept: application/json
+}
+
+body:json {
+  {
+      "storeno": 0,
+      "pluno": {{pluno}},
+      "pludepartmentno": 1,
+      "plugroupno": 1,
+      "plutraceability":1,
+      "plubarcoderefno": "22",
+      "plubarcodedata": "12343807",
+      "plucommname": "Plu modificato Test",
+      "pluunitprice": 0.99,
+      "plutexts": [
+          {
+              "plutextindex": 1,
+              "plutextval": "Bedst før modificato 1000"
+          }
+      ],
+      "pluingredients": "Line 1 Steges modificato",
+       "plubornin": [
+          {
+              "pluborninindex": 1,
+              "pluborninvalue": 724
+          },
+          {
+              "pluborninindex": 2,
+              "pluborninvalue": 724
+          },
+          {
+              "pluborninindex": 3,
+              "pluborninvalue": 724
+          },
+          {
+              "pluborninindex": 4,
+              "pluborninvalue": 380
+          },
+          {
+              "pluborninindex": 5,
+              "pluborninvalue": 380
+          },
+          {
+              "pluborninindex": 6,
+              "pluborninvalue": 380
+          },
+          {
+              "pluborninindex": 7,
+              "pluborninvalue": 380
+          },
+          {
+              "pluborninindex": 8,
+              "pluborninvalue": 380
+          },
+          {
+              "pluborninindex": 9,
+              "pluborninvalue": 380
+          },
+          {
+              "pluborninindex": 10,
+              "pluborninvalue": 380
+          },
+          {
+              "pluborninindex": 11,
+              "pluborninvalue": 380
+          },
+          {
+              "pluborninindex": 12,
+              "pluborninvalue": 380
+          },
+          {
+              "pluborninindex": 13,
+              "pluborninvalue": 250
+          },
+          {
+              "pluborninindex": 14,
+              "pluborninvalue": 380
+          },
+          {
+              "pluborninindex": 15,
+              "pluborninvalue": 616
+          },
+          {
+              "pluborninindex": 16,
+              "pluborninvalue": 724
+          },
+          {
+              "pluborninindex": 17,
+              "pluborninvalue": 724
+          },
+          {
+              "pluborninindex": 18,
+              "pluborninvalue": 724
+          },
+          {
+              "pluborninindex": 19,
+              "pluborninvalue": 724
+          },
+          {
+              "pluborninindex": 20,
+              "pluborninvalue": 724
+          },
+          {
+              "pluborninindex": 21,
+              "pluborninvalue": 724
+          },
+          {
+              "pluborninindex": 22,
+              "pluborninvalue": 724
+          },
+          {
+              "pluborninindex": 23,
+              "pluborninvalue": 724
+          },
+          {
+              "pluborninindex": 24,
+              "pluborninvalue": 724
+          },
+          {
+              "pluborninindex": 25,
+              "pluborninvalue": 724
+          }
+      ],
+      "plubreeding": [
+          {
+              "plubreedingindex": 1,
+              "plubreedingvalue": 724
+          },
+          {
+              "plubreedingindex": 2,
+              "plubreedingvalue": 724
+          },
+          {
+              "plubreedingindex": 3,
+              "plubreedingvalue": 724
+          },
+          {
+              "plubreedingindex": 4,
+              "plubreedingvalue": 724
+          },
+          {
+              "plubreedingindex": 5,
+              "plubreedingvalue": 724
+          },
+          {
+              "plubreedingindex": 6,
+              "plubreedingvalue": 724
+          },
+          {
+              "plubreedingindex": 7,
+              "plubreedingvalue": 724
+          },
+          {
+              "plubreedingindex": 8,
+              "plubreedingvalue": 724
+          },
+          {
+              "plubreedingindex": 9,
+              "plubreedingvalue": 724
+          },
+          {
+              "plubreedingindex": 10,
+              "plubreedingvalue": 724
+          },
+          {
+              "plubreedingindex": 11,
+              "plubreedingvalue": 724
+          },
+          {
+              "plubreedingindex": 12,
+              "plubreedingvalue": 724
+          },
+          {
+              "plubreedingindex": 13,
+              "plubreedingvalue": 724
+          },
+          {
+              "plubreedingindex": 14,
+              "plubreedingvalue": 724
+          },
+          {
+              "plubreedingindex": 15,
+              "plubreedingvalue": 724
+          },
+          {
+              "plubreedingindex": 16,
+              "plubreedingvalue": 724
+          },
+          {
+              "plubreedingindex": 17,
+              "plubreedingvalue": 724
+          },
+          {
+              "plubreedingindex": 18,
+              "plubreedingvalue": 724
+          },
+          {
+              "plubreedingindex": 19,
+              "plubreedingvalue": 724
+          },
+          {
+              "plubreedingindex": 20,
+              "plubreedingvalue": 724
+          },
+          {
+              "plubreedingindex": 21,
+              "plubreedingvalue": 724
+          },
+          {
+              "plubreedingindex": 22,
+              "plubreedingvalue": 724
+          },
+          {
+              "plubreedingindex": 23,
+              "plubreedingvalue": 724
+          },
+          {
+              "plubreedingindex": 24,
+              "plubreedingvalue": 724
+          },
+          {
+              "plubreedingindex": 25,
+              "plubreedingvalue": 724
+          },
+          {
+              "plubreedingindex": 26,
+              "plubreedingvalue": 724
+          }
+      ],
+      "plucuttingin": [
+          {
+              "plucuttinginindex": 1,
+              "plucuttinginvalue": 724
+          },
+          {
+              "plucuttinginindex": 2,
+              "plucuttinginvalue": 724
+          },
+          {
+              "plucuttinginindex": 3,
+              "plucuttinginvalue": 724
+          },
+          {
+              "plucuttinginindex": 4,
+              "plucuttinginvalue": 724
+          },
+          {
+              "plucuttinginindex": 5,
+              "plucuttinginvalue": 724
+          },
+          {
+              "plucuttinginindex": 6,
+              "plucuttinginvalue": 724
+          },
+          {
+              "plucuttinginindex": 7,
+              "plucuttinginvalue": 724
+          },
+          {
+              "plucuttinginindex": 8,
+              "plucuttinginvalue": 724
+          },
+          {
+              "plucuttinginindex": 9,
+              "plucuttinginvalue": 724
+          },
+          {
+              "plucuttinginindex": 10,
+              "plucuttinginvalue": 724
+          },
+          {
+              "plucuttinginindex": 11,
+              "plucuttinginvalue": 724
+          },
+          {
+              "plucuttinginindex": 12,
+              "plucuttinginvalue": 724
+          },
+          {
+              "plucuttinginindex": 13,
+              "plucuttinginvalue": 724
+          },
+          {
+              "plucuttinginindex": 14,
+              "plucuttinginvalue": 724
+          },
+          {
+              "plucuttinginindex": 15,
+              "plucuttinginvalue": 724
+          },
+          {
+              "plucuttinginindex": 16,
+              "plucuttinginvalue": 724
+          },
+          {
+              "plucuttinginindex": 17,
+              "plucuttinginvalue": 724
+          },
+          {
+              "plucuttinginindex": 18,
+              "plucuttinginvalue": 724
+          },
+          {
+              "plucuttinginindex": 19,
+              "plucuttinginvalue": 724
+          },
+          {
+              "plucuttinginindex": 20,
+              "plucuttinginvalue": 724
+          },
+          {
+              "plucuttinginindex": 21,
+              "plucuttinginvalue": 724
+          },
+          {
+              "plucuttinginindex": 22,
+              "plucuttinginvalue": 724
+          },
+          {
+              "plucuttinginindex": 23,
+              "plucuttinginvalue": 724
+          },
+          {
+              "plucuttinginindex": 24,
+              "plucuttinginvalue": 724
+          },
+          {
+              "plucuttinginindex": 25,
+              "plucuttinginvalue": 724
+          },
+          {
+              "plucuttinginindex": 26,
+              "plucuttinginvalue": 724
+          }
+      ],
+      "pluslaughteredin": [
+          {
+              "pluslaughteredinindex": 1,
+              "pluslaughteredinvalue": 724
+          },
+          {
+              "pluslaughteredinindex": 2,
+              "pluslaughteredinvalue": 724
+          },
+          {
+              "pluslaughteredinindex": 3,
+              "pluslaughteredinvalue": 724
+          },
+          {
+              "pluslaughteredinindex": 4,
+              "pluslaughteredinvalue": 724
+          },
+          {
+              "pluslaughteredinindex": 5,
+              "pluslaughteredinvalue": 724
+          },
+          {
+              "pluslaughteredinindex": 6,
+              "pluslaughteredinvalue": 724
+          },
+          {
+              "pluslaughteredinindex": 7,
+              "pluslaughteredinvalue": 724
+          },
+          {
+              "pluslaughteredinindex": 8,
+              "pluslaughteredinvalue": 724
+          },
+          {
+              "pluslaughteredinindex": 9,
+              "pluslaughteredinvalue": 724
+          },
+          {
+              "pluslaughteredinindex": 10,
+              "pluslaughteredinvalue": 724
+          },
+          {
+              "pluslaughteredinindex": 11,
+              "pluslaughteredinvalue": 724
+          },
+          {
+              "pluslaughteredinindex": 12,
+              "pluslaughteredinvalue": 724
+          },
+          {
+              "pluslaughteredinindex": 13,
+              "pluslaughteredinvalue": 724
+          },
+          {
+              "pluslaughteredinindex": 14,
+              "pluslaughteredinvalue": 724
+          },
+          {
+              "pluslaughteredinindex": 15,
+              "pluslaughteredinvalue": 724
+          },
+          {
+              "pluslaughteredinindex": 16,
+              "pluslaughteredinvalue": 724
+          },
+          {
+              "pluslaughteredinindex": 17,
+              "pluslaughteredinvalue": 724
+          },
+          {
+              "pluslaughteredinindex": 18,
+              "pluslaughteredinvalue": 724
+          },
+          {
+              "pluslaughteredinindex": 19,
+              "pluslaughteredinvalue": 724
+          },
+          {
+              "pluslaughteredinindex": 20,
+              "pluslaughteredinvalue": 724
+          },
+          {
+              "pluslaughteredinindex": 21,
+              "pluslaughteredinvalue": 724
+          },
+          {
+              "pluslaughteredinindex": 22,
+              "pluslaughteredinvalue": 840
+          },
+          {
+              "pluslaughteredinindex": 23,
+              "pluslaughteredinvalue": 724
+          },
+          {
+              "pluslaughteredinindex": 24,
+              "pluslaughteredinvalue": 724
+          },
+          {
+              "pluslaughteredinindex": 25,
+              "pluslaughteredinvalue": 724
+          },
+          {
+              "pluslaughteredinindex": 26,
+              "pluslaughteredinvalue": 724
+          }
+      ]
+  }
+}
+
+script:pre-request {
+  var pluno = bru.getEnvVar("pluno");
+  // var newTraceType = 2;
+  
+  pluno = parseInt(pluno) + 1;
+  
+  // if(pluno == 10){
+  // //     pm.environment.set("newTraceType",newTraceType);
+  // }
+  
+  bru.setEnvVar("pluno",pluno);
+}
+
+settings {
+  encodeUrl: true
+}

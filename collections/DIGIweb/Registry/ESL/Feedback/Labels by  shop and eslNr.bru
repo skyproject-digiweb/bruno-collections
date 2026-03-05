@@ -1,0 +1,20 @@
+meta {
+  name: Labels by  shop and eslNr
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{registry}}/api/v1/esl/labels/:shop_uuid/:eslNr
+  body: none
+  auth: inherit
+}
+
+params:path {
+  shop_uuid: bce5a53a-55e2-4933-b388-3f926faf06e4
+  eslNr: 123456789
+}
+
+settings {
+  encodeUrl: true
+}

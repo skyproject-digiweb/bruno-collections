@@ -1,0 +1,26 @@
+meta {
+  name: /api/licenses/search
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/licenses/search?customerAddress=<string>&customerName=<string>&refOrder=<string>&registerID=<string>
+  body: none
+  auth: inherit
+}
+
+params:query {
+  customerAddress: <string>
+  customerName: <string>
+  refOrder: <string>
+  registerID: <string>
+}
+
+headers {
+  Accept: application/json
+}
+
+settings {
+  encodeUrl: true
+}

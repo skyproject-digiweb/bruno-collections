@@ -1,0 +1,24 @@
+meta {
+  name: /v1/third-party/hello
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{thirdparty}}/api/v1/third-party/traceability?storeno=3
+  body: json
+  auth: inherit
+}
+
+params:query {
+  storeno: 3
+}
+
+headers {
+  Content-Type: application/json
+  Accept: application/json
+}
+
+settings {
+  encodeUrl: true
+}

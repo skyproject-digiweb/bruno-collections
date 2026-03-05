@@ -1,0 +1,21 @@
+meta {
+  name: Devices
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{registry}}/api/v1/devices?startRow=0&pageSize=10&obj.is_working=false
+  body: none
+  auth: inherit
+}
+
+params:query {
+  startRow: 0
+  pageSize: 10
+  obj.is_working: false
+}
+
+settings {
+  encodeUrl: true
+}

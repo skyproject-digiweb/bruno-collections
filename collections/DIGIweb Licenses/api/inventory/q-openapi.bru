@@ -1,0 +1,19 @@
+meta {
+  name: /q/openapi
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/q/openapi?format=json
+  body: none
+  auth: none
+}
+
+params:query {
+  format: json
+}
+
+settings {
+  encodeUrl: true
+}
