@@ -1,0 +1,69 @@
+meta {
+  name: /api/invoices
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/api/v2/invoices
+  body: json
+  auth: inherit
+}
+
+headers {
+  Accept: application/json
+}
+
+body:json {
+  [
+      {
+          "licenseSerialNumber": 4,
+          "customerCompanyCode": "DIT",
+          "itemBaanCode": "J201",
+          "itemBaanName": "DIGIweb License",
+          "customerOrderReferenceValue": "4",
+          "quantity": 4,
+          "date": "2024-10-18T15:26:31.926+00:00"
+      },
+      {
+          "licenseSerialNumber": 4,
+          "customerCompanyCode": "DIT",
+          "itemBaanCode": "J202",
+          "itemBaanName": "Maintenance&Update Fee",
+          "customerOrderReferenceValue": "4",
+          "quantity": 4,
+          "date": "2024-10-18T15:26:31.926+00:00"
+      },
+      {
+          "licenseSerialNumber": 1,
+          "customerCompanyCode": "DIT",
+          "itemBaanCode": "J201",
+          "itemBaanName": "DIGIweb License",
+          "customerOrderReferenceValue": "1",
+          "quantity": 1,
+          "date": "2024-10-21T15:25:02.385+00:00"
+      },
+      {
+          "licenseSerialNumber": 2,
+          "customerCompanyCode": "DIT",
+          "itemBaanCode": "J202",
+          "itemBaanName": "Maintenance&Update Fee",
+          "customerOrderReferenceValue": "2",
+          "quantity": 2,
+          "date": "2024-10-21T15:27:49.617+00:00"
+      },
+      {
+          "licenseSerialNumber": 3,
+          "customerCompanyCode": "DIT",
+          "itemBaanCode": "J202",
+          "itemBaanName": "Maintenance&Update Fee",
+          "customerOrderReferenceValue": "3",
+          "quantity": 3,
+          "date": "2024-10-21T15:28:28.895+00:00"
+      }
+  ]
+}
+
+settings {
+  encodeUrl: true
+}

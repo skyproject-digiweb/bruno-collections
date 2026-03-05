@@ -1,0 +1,14 @@
+opencollection: 1.0.0
+info:
+  name: "Sky-project"
+  type: workspace
+
+collections:
+  - name: "DIGIweb"
+    path: "collections/DIGIweb"
+  - name: "DIGIweb Licenses"
+    path: "collections/DIGIweb Licenses"
+
+specs:
+
+docs: ''

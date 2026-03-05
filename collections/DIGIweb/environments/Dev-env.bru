@@ -4,14 +4,10 @@ vars {
   registry: http://localhost:7080/api/registry
   configuration: http://localhost:7080/api/configuration
   keycloak-client-id: a9ebfb75-adda-49c5-af38-f54f43ca9c43
-  keycloak-client-secret: mwPdl4CyHt7U2xIFnuSNFoNdCJkCSt2l
   keycloak-esl-client-id: t@pop---laz
-  keycloak-esl-client-secret: YXHUPsGZtsWDHG8RqVGb8jfaM57qnKtR
   operations: http://localhost:7080/api/operations
   external-third-party-client: external-third-party-client
-  external-third-party-client-secret: Eua1KlOpkUbML4dmaamxbifzmz9nsN2l
   intermodule-service-client: intermodule-service
-  intermodule-service-client-secret: 4tWabr62dYCWEG4GCW5xKTh3d9XkK1VO
   iot: http://localhost:7080/iot
   iot_fe: http://localhost:8091/api/iot
   ~nrShop: 0
@@ -22,5 +18,11 @@ vars {
   ~pluno: 0
   ~multiclient: http://localhost:9091
   pluno: 
-  access-token: empty-value
 }
+vars:secret [
+  keycloak-client-secret,
+  keycloak-esl-client-secret,
+  external-third-party-client-secret,
+  intermodule-service-client-secret,
+  access-token
+]

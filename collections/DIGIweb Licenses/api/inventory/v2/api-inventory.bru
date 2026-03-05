@@ -1,0 +1,19 @@
+meta {
+  name: /api/inventory
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/v2/inventory
+  body: none
+  auth: inherit
+}
+
+headers {
+  Accept: application/json
+}
+
+settings {
+  encodeUrl: true
+}

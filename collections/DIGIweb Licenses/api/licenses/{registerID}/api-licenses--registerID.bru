@@ -1,0 +1,23 @@
+meta {
+  name: /api/licenses/:registerID
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/api/licenses/:registerID
+  body: none
+  auth: inherit
+}
+
+params:path {
+  registerID: <long>
+}
+
+headers {
+  Accept: application/json
+}
+
+settings {
+  encodeUrl: true
+}

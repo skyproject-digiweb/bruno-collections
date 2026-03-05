@@ -1,0 +1,28 @@
+meta {
+  name: /api/tickets/report
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/tickets/report
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+  Accept: application/json
+}
+
+body:json {
+  {
+    "subject": "Prova subject",
+    "description": "prova description",
+    "status" : "OPEN"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

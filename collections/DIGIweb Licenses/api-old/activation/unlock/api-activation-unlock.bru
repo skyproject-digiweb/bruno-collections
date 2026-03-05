@@ -1,0 +1,27 @@
+meta {
+  name: /api/activation/unlock
+  type: http
+  seq: 1
+}
+
+put {
+  url: {{baseUrl}}/api/activation/unlock
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+  Accept: application/json
+}
+
+body:json {
+  {
+    "digiwebUniqueIdentifier": "4e05c2ab-272c-4076-aa1e-031839903874",
+    "unlockCode": "06qGbHdtTo-7mLbcnzC4kg"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
