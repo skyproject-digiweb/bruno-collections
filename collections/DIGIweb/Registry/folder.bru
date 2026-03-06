@@ -3,61 +3,24 @@ meta {
 }
 
 auth {
-  mode: bearer
+  mode: oauth2
 }
 
-auth:bearer {
-  token: {{access-token}}
-}
-
-script:pre-request {
-  var client_id = bru.getCollectionVar("client_id");
-  var server_url = bru.getEnvVar("keycloak-server-url");
-  var username = bru.getCollectionVar("username");
-  var password = bru.getCollectionVar("password");
-  
-  var token_endpoint = server_url + "/realms/skypro/protocol/openid-connect/token";
-  
-  var details = {
-     "grant_type" : "password",
-     "username": username,
-     "password": password,
-     "client_id": client_id
-  }
-  
-  var formBody = [];
-  
-  for (var property in details) {
-      var encodedKey = encodeURIComponent(property);
-      var encodedValue = encodeURIComponent(details[property]);
-      formBody.push(encodedKey + "=" + encodedValue);
-  }
-  
-  formBody = formBody.join("&");
-  
-  console.log(token_endpoint);
-  console.log(formBody);
-  
-  await bru.sendRequest({
-     url: token_endpoint,
-     method: 'POST',
-     headers: {
-         'Content-Type': 'application/x-www-form-urlencoded'
-           },
-       data: formBody
-  }, async function(err, response) {
-      if (err) {
-        console.error(err)
-  		throw err;
-  	}
-    console.log(response)
-      const jsonResponse = response.data;
-      if (!jsonResponse.access_token) {
-  		throw new Error("Unexpected response: missing 'access_token' property.\n" + 
-  			JSON.stringify(jsonResponse));
-  	}
-    console.log(jsonResponse.access_token)
-      bru.setEnvVar("access-token", jsonResponse.access_token);
-    console.log("env",bru.getEnvVar("access-token"));
-  });
+auth:oauth2 {
+  grant_type: authorization_code
+  callback_url: {{fe-url}}
+  authorization_url: {{keycloak-server-url}}/realms/skypro/protocol/openid-connect/auth
+  access_token_url: {{keycloak-server-url}}/realms/skypro/protocol/openid-connect/token
+  refresh_token_url: {{keycloak-server-url}}/realms/skypro/protocol/openid-connect/token
+  client_id: admin-ng
+  client_secret: 
+  scope: email
+  state: 
+  pkce: false
+  credentials_placement: basic_auth_header
+  credentials_id: credentials
+  token_placement: header
+  token_header_prefix: Bearer
+  auto_fetch_token: true
+  auto_refresh_token: true
 }
