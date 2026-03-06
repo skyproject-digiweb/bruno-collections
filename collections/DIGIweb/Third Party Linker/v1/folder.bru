@@ -1,6 +1,5 @@
 meta {
   name: v1
-  seq: 2
 }
 
 auth {
@@ -11,13 +10,13 @@ auth:oauth2 {
   grant_type: client_credentials
   access_token_url: {{keycloak-server-url}}/realms/skypro/protocol/openid-connect/token
   refresh_token_url: 
-  client_id: {{intermodule-service-client}}
-  client_secret: {{intermodule-service-client-secret}}
+  client_id: {{external-third-party-client}}
+  client_secret: {{external-third-party-client-secret}}
   scope: 
   credentials_placement: basic_auth_header
-  credentials_id: 
+  credentials_id: credentials
   token_placement: header
-  token_header_prefix: 
+  token_header_prefix: Bearer
   auto_fetch_token: true
   auto_refresh_token: false
 }
